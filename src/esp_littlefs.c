@@ -373,7 +373,7 @@ esp_err_t esp_littlefs_format(const char* partition_label) {
     {
         int res;
         ESP_LOGV(TAG, "Formatting filesystem");
-        esp_littlefs_erase_partition(partition_label);
+        //esp_littlefs_erase_partition(partition_label);
         res = lfs_format(efs->fs, &efs->cfg);
         if( res != LFS_ERR_OK ) {
             ESP_LOGE(TAG, "Failed to format filesystem");
